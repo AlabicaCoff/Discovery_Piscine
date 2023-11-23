@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="x">
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" name="y">
+        <input type="submit" name="submit" value="Try me!">
+    </form>
+
+    <script>
+        var math = {
+            '+': function (x, y) { return x + y },
+            '-': function (x, y) { return x - y },
+            '*': function (x, y) { return x * y },
+            '/': function (x, y) { return x / y },
+            '%': function (x, y) { return x % y }
+        };
+
+        $(document).ready(function () {
+            $("#myForm").submit(function (event) {
+                event.preventDefault();
+                const x = $("input[name='x']").val();
+                const y = $("input[name='y']").val();
+                const x_array = x.split(" ");
+                const y_array = y.split(" ");
+                const num1 = parseFloat(x);
+                const num2 = parseFloat(y);
+
+                if (x_array.length > 1 || y_array.length > 1 || isNaN(x) || isNaN(y) 
+                || num1 < 0 || num2 < 0 || !(Number.isInteger(num1)) || !(Number.isInteger(num2))) {
+                    window.alert("Error :(");
+                    return;
+                }
+
+                const op = $("#operators").val();
+                const res = math[op](num1, num2);
+
+                if (num2 == 0 && (op == '%' || op == '/')) {
+                    console.log("It’s over 9000!");
+                    window.alert("It’s over 9000!");
+                } else {
+                    console.log(res);
+                    window.alert(res);
+                }
+            });
+
+            setInterval(function () { window.alert("Please, use me..."); }, 30000);
+        });
+    </script>
+</body>
+</html>

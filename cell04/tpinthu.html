@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="tpinthu.css" />
+    <link rel="stylesheet" href="tpinthu_media.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            <a href="main.html"><</a>
+        </div>
+        <div>
+            <ul class="follow-nav">
+
+            </ul>
+        </div>
+        <div>
+            <ul class="home-nav-links">
+                <li><a id="profile-btn" onclick="goToFunction(0)">About</a></li>
+                <li><a href="#parallax-bg1">Showcase</a></li>
+                <li><a href="#parallax-bg2">Contact</a></li>
+                <li><a href="sprapamo.html">Friend</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">
+            <a href="#Back"><</a>
+        </div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a id="profile-btn" onclick="goToFunction(0)">About</a></li>
+                <li><a href="#parallax-bg1">Showcase</a></li>
+                <li><a href="#parallax-bg2">Contact</a></li>
+                <li><a href="sprapamo.html">Friend</a></li>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <section id="profile">
+            <div class="profile-container">
+                <img id="profile-img" src="assets/profile1.jpg" alt="my profile picture">
+            </div>
+            <div class="profile-text">
+                <p class="profile-text-p1">Hello, I'm</p>
+                <h1 class="title">Thanathat Pinthu</h1>
+                <p class="profile-text-p2">KMITL Student</p>
+                <p class="profile-text-p3">Nickname: March | Birthday: 25 Dec 2003</p>
+                <div class="btn-container">
+                    <button class="btn btn-color2" onclick="window.location.href='#parallax-bg1'">
+                        Showcase
+                    </button>
+                    <button class="btn btn-color1" onclick="window.location.href='#parallax-bg2'">
+                        Contact
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="parallax" id="parallax-bg1">
+            <h1 class="title">Showcase</h1>
+        </div>
+        <section id="experience">
+            <div class="experience-container">
+                <h2 class="sub-title">Certificate</h2>
+                <img id="certificate" src="assets/cert1.jpg" alt="PR Awards certificate">
+            </div>
+            <div class="experience-container">
+                <div class="skills-container">
+                    <div class="hardware-skills">
+                        <h2 class="sub-title">Hardware</h2>
+                        <div class="progress">
+                            <span class="skill">
+                                Verilog
+                                <i class="val">50%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">
+                                Arduino
+                                <i class="val">30%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">
+                                ESP8266
+                                <i class="val">10%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">
+                                VHDL
+                                <i class="val">5%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="software-skills">
+                        <h2 class="sub-title">Software</h2>
+                        <div class="progress">
+                            <span class="skill">
+                                Python
+                                <i class="val">70%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">
+                                HTML
+                                <i class="val">50%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">
+                                Javascript
+                                <i class="val">30%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">
+                                CSS
+                                <i class="val">25%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">
+                                C++
+                                <i class="val">15%</i>
+                            </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="parallax" id="parallax-bg2">
+            <h1 class="title">Contact</h1>
+        </div>
+        <section id="contact">
+            <div class="contact-container">
+                <h1 class="sub-title">Contact</h1>
+            </div>
+            <div class="contact-container">
+                <div class="social-contact">
+                    <a href="https://www.facebook.com/mrchmello" class="icon">
+                        <i class="fa fa-facebook"></i>
+                        <p>Thanathat Pinthu</p>
+                    </a>
+                    <a href="https://instagram.com/mello_mrch" class="icon">
+                        <i class="fa fa-instagram"></i>
+                        <p>mello_mrch</p>
+                    </a>
+                    <a href="https://github.com/AlabicaCoff" class="icon">
+                        <i class="fa fa-github"></i>
+                        <p>AlabicaCoff</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="tpinthu.js"></script>
+  </body>

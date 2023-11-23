@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<body>
+    <form name="myForm">
+        <input type="text" name="x">
+        <select id="operators">
+            <option name="+" value="+">+</option>
+            <option name="-" value="-">-</option>
+            <option name="*" value="*">*</option>
+            <option name="/" value="/">/</option>
+            <option name="%" value="%">%</option>
+        </select>
+        <input type="text" name="y">
+        <input type="submit" name="submit" value="Try me!" onclick="Calculator()">
+    </form>
+    
+</body>
+</html>
+
+<script>
+    var math = {
+        '+': function (x,y) {return x + y},
+        '-': function (x,y) {return x - y},
+        '*': function (x,y) {return x * y},
+        '/': function (x,y) {return x / y},
+        '%': function (x,y) {return x % y}
+    };
+
+    function checkString(string){
+        if(typeof string === "string"){
+            return isNaN(string);
+        } 
+    }
+
+    function Calculator() {
+        event.preventDefault()
+        const x = document.forms["myForm"]["x"].value;
+        const y = document.forms["myForm"]["y"].value;
+        const x_array = x.split(" ");
+        const y_array = y.split(" ");
+        const num1 = parseInt(x);
+        const num2 = parseInt(y);
+        if (x_array.length > 1 || y_array.length > 1 || checkString(x) || checkString(y) || num1 < 0 || num2 < 0) {
+            window.alert("Error :(")
+            return
+        }
+        
+        const op = document.querySelector("#operators");
+        const res = math[op.value](num1, num2);
+        if (num2 == 0 && (op.value == '%' || op.value == '/')) {
+            console.log("It’s over 9000!")
+            window.alert("It’s over 9000!")
+        }
+        else {
+            console.log(res)
+            window.alert(res)
+        }
+    }
+
+    setInterval(function () {window.alert("Please, use me...");}, 30000);
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+</head>
+<body>
+   <div class="balloon" onclick="clickBalloon()" onmouseleave="shrinkBalloon()"></div>
+</body>
+</html>
+
+<style>
+    .balloon {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+</style>
+
+<script>
+    const colors = ["green", "blue", "red"];
+    const balloon = document.querySelector("div");
+
+    let i = 2;
+    function clickBalloon () {
+        let widthElem = balloon.offsetWidth;
+        let heightElem = balloon.offsetHeight;
+
+        balloon.style.width = widthElem + 10 + 'px';
+        balloon.style.height = heightElem + 10 + 'px';
+        
+        if (widthElem > 420 && heightElem > 420) {
+            balloon.style.width = 200 + 'px';
+            balloon.style.height = 200 + 'px';
+        }
+
+        i = i + 1;
+        if (i > 2) {i = 0;}
+        balloon.style.backgroundColor = colors[i];
+        
+    }
+
+    function shrinkBalloon () {
+        let widthElem = balloon.offsetWidth;
+        let heightElem = balloon.offsetHeight;
+
+        if (widthElem > 200 && heightElem > 200) {
+            balloon.style.width = widthElem - 5 + 'px';
+            balloon.style.height = heightElem - 5 + 'px';
+        } 
+
+        i = i - 1;
+        if (i < 0) {i = 2;}   
+        balloon.style.backgroundColor = colors[i];
+    }
+</script> 

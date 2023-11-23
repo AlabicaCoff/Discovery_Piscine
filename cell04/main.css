@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background-image: url(assets/parallax1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    padding: 30%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+
+.text_box {
+    text-align: center;
+}
+
+#title {
+    font-size: 32px;
+}
+
+#description {
+    font-size: 18px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 15px;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btn-color1{
+    color: white;
+    border-color: white;
+    background-color: #28282B;
+}
+
+.btn-color2{
+    color: black;
+    background: white;
+    border-color: gray;
+}
+
+.btn-color1:hover, .btn-color2:hover {
+    color: white;
+    background-color: grey;
+    border-color: #242424;
+}

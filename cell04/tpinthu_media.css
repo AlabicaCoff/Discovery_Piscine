@@ -1,0 +1,62 @@
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+        position: absolute;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        position: fixed;
+    }
+
+
+
+    .wrapper {
+        perspective: 5px;
+    }
+
+    section {
+        transform: translateZ(-5px) scale(2);
+    }
+
+    #profile {
+        flex-direction: column;
+    }
+
+    .profile-container {
+        justify-content: center;
+        width: auto;
+        height: auto;
+      }
+
+    #profile-img {
+        border-radius: 50%;
+        height: 270px;
+        width: 270px;
+    }
+
+    .skills-title {
+        flex-direction: column;
+    }
+
+    #certificate, .hardware-skills {
+        width: 400px;
+        height: 260px;
+    }
+
+    .software-skills {
+        width: 400px;
+        height: 320px;
+    }
+
+    .social-contact {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .skills-container {
+        flex-direction: column;
+        margin: 0 15px;
+    }
+}

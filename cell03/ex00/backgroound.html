@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="background.css" />
+    <title>Background</title>
+</head>
+<body>
+   <button onclick="changeColor()">Click me!</button>
+</body>
+</html>
+
+<script>
+    
+    const background = document.querySelector("body");
+    function changeColor () {
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        background.style.backgroundColor = "#" + randomColor;
+    }
+</script>
